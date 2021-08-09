@@ -41,20 +41,20 @@ print("this thread is still going strong")
 #     s.run(blocking=False)
 
 
-# while True:
-#     event_name = input("give a name for the event you want to be notified of \n")
-#     event_time = input("how long do you want to wait for the notification? (valid inputs seconds/minutes:seconds/hours:minutes:seconds) \n")
-#     split_time = event_time.split(":")
-#     try:
-#         split_time = [int(x) for x in split_time]
-#     except:
-#         print("Are you inputting numbers?")
-#         exit()
-#     print("your split time is ", split_time)
+while True:
+    event_name = input("give a name for the event you want to be notified of \n")
+    event_time = input("how long do you want to wait for the notification? (valid inputs seconds/minutes:seconds/hours:minutes:seconds) \n")
+    split_time = event_time.split(":")
+    try:
+        split_time = [int(x) for x in split_time]
+    except:
+        print("Are you inputting numbers?")
+        exit()
+    print("your split time is ", split_time)
 
-#     time_in_seconds = 0
-#     time_in_seconds += split_time[-1]
-#     time_in_seconds += 60*split_time[-2] if len(split_time)>1 else 0
-#     time_in_seconds += 60**2*split_time[0] if len(split_time)>2 else 0
+    time_in_seconds = 0
+    time_in_seconds += split_time[-1]
+    time_in_seconds += 60*split_time[-2] if len(split_time)>1 else 0
+    time_in_seconds += 60**2*split_time[0] if len(split_time)>2 else 0
 
-#     print("your thing happens in ", time_in_seconds, " seconds")
+    print("your thing happens in ", time_in_seconds, " seconds")
